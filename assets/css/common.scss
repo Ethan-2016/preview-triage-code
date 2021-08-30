@@ -1,0 +1,1087 @@
+/* 表框的颜色 */
+@import "../../assets/css/_handle.scss";
+//页面背景
+.child-page {
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  font-family: Microsoft YaHei Regular,
+  Microsoft YaHei Regular-Regular;
+  height: calc(100vh - 125px);
+  overflow-y: scroll;
+  @include background_color("background_color5")
+}
+
+
+.el-table::before {
+  height: 0;
+}
+
+.el-table {
+  border: 1px solid #D2D5DD;
+  border-radius: 6px;
+}
+
+.el-table th {
+  height: 45px;
+  padding: 0;
+  font-weight: 700;
+  color: #262626;
+  background: #E4E7ED;
+}
+
+.el-table td {
+  height: 40px;
+  padding: 0;
+  font-weight: 400;
+  color: #000;
+}
+
+.el-table__expand-icon {
+  float: left;
+  font-size: 18px;
+  position: relative;
+  top: 5px;
+}
+
+.el-table__body-wrapper {
+  height: calc(100vh - 322px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+//分页样式
+.el-pagination {
+  display: flex;
+  margin-top: 12px;
+  justify-content: flex-end;
+  text-align: right;
+
+  button {
+    padding: 0;
+    margin: 6px;
+  }
+
+  button:disabled {
+    @include font_color('font_color5');
+  }
+
+  .el-pagination__total,
+  .el-pagination__jump {
+    @include font_color('font_color6');
+  }
+
+  .btn-prev,
+  .btn-next {
+    @include background_color("background_color14");
+    @include font_color('font_color6');
+    padding: 0;
+  }
+
+  .el-pager {
+    li {
+      padding: 0;
+      margin: 0 4px;
+      @include background_color("background_color14");
+      @include font_color('font_color6');
+
+      &.active {
+        @include background_color("background_color16");
+        @include font_color('font_color7');
+      }
+    }
+  }
+}
+
+//选择框
+.el-popper {
+  @include background_color('background_color8');
+  @include border_color('border_color2');
+
+  .el-select-dropdown__item.hover,
+  .el-select-dropdown__item:hover {
+    @include background_color('background_color12');
+
+  }
+
+  .el-select-dropdown__item {
+    @include font_color('font_color2');
+
+  }
+
+  .selected {
+    color: #1BAD96 !important;
+  }
+
+  .popper__arrow {
+    @include border_bottom_color('border_color1');
+    @include border_top_color('border_color1');
+
+    &::after {
+      border: 0
+    }
+  }
+}
+
+//日历选择框
+.el-date-editor .el-range-separator {
+  @include font_color('font_color2');
+}
+
+.el-date-range-picker__time-header,
+.el-picker-panel__content {
+  @include background_color("background_color8");
+  @include border_color('border_color3');
+}
+
+.el-date-table th {
+  @include border_color('border_color3');
+}
+
+.el-date-table td.in-range div,
+.el-date-table td.in-range div:hover,
+.el-date-table.is-week-mode .el-date-table__row.current div,
+.el-date-table.is-week-mode .el-date-table__row:hover div {
+  @include background_color("background_color12");
+}
+
+.el-picker-panel__footer {
+  @include background_color("background_color8");
+  @include border_top_color('border_color3');
+
+  .el-button.is-plain,
+  .el-button.is-plain {
+    background: #1bad96;
+    border-color: #1BAD96;
+    color: #FFF;
+  }
+}
+
+.el-date-picker table {
+  @include background_color("background_color8");
+}
+
+.el-date-picker__time-header {
+  @include border_bottom_color('border_color3');
+}
+
+.el-time-spinner__item.active:not(.disabled) {
+  @include font_color('font_color2');
+}
+
+.el-time-spinner__item:hover:not(.disabled):not(.active) {
+  @include background_color("background_color12");
+}
+
+.el-time-panel__btn {
+  @include font_color('font_color2');
+}
+
+.el-time-panel__btn.confirm {
+  color: #33d3bd;
+}
+
+//输入框
+.el-input__inner,
+.el-textarea__inner {
+  @include background_color('background_color8');
+  @include font_color('font_color2');
+  @include border_color('border_color2');
+}
+
+.el-input.is-disabled .el-input__inner {
+  @include background_color('background_color18');
+  @include border_color('border_color2');
+  @include background_color('background_color18');
+  @include font_color("font_color2");
+}
+
+.el-select .el-input.is-disabled .el-input__inner:hover {
+  @include border_color('border_color2');
+}
+
+
+//时间选择器
+.el-range-input {
+  @include background_color("background_color8");
+  @include font_color("font_color2");
+}
+
+//加载中mask
+.el-loading-mask {
+  @include background_color("background_color17");
+}
+
+//弹窗样式 
+.el-dialog .el-dialog__body,
+.el-dialog .el-dialog__footer {
+  @include background_color("background_color5");
+}
+
+//上传 {
+.el-upload-dragger {
+  @include background_color("background_color5");
+}
+
+//风琴
+.el-collapse-item__wrap {
+  @include background_color("background_color7");
+}
+
+//按钮
+.el-button {
+  @include background_color("background_color8");
+  border-radius: 5px;
+  padding: 10px 8px;
+  min-width: 80px;
+  border-radius: 3px;
+  // @include border_color('border_color3');
+}
+
+.el-button--primary {
+  background-color: #1BAD96 !important;
+  border-color: #1BAD96 !important;
+}
+
+.el-button--text {
+  background-color: rgba(0, 0, 0, 0) !important;
+  min-width: auto;
+}
+
+//tab切换按钮
+.el-tabs__item+.el-tabs__item {
+  margin-left: 15px;
+}
+
+//tabs横线去除
+.el-tabs--left .el-tabs__nav-wrap.is-left::after,
+.el-tabs--left .el-tabs__nav-wrap.is-right::after,
+.el-tabs--right .el-tabs__nav-wrap.is-left::after,
+.el-tabs--right .el-tabs__nav-wrap.is-right::after {
+  width: 1;
+}
+
+//退出图标弹窗文字
+span.iconfont.logout {
+  @include font_color("font_color2");
+}
+
+//选择框
+.el-checkbox {
+  @include font_color("font_color3");
+}
+
+// 其他页面公共 
+.aid-overview-page>div>ul>li {
+  @include background_color("background_color10");
+  // @include border_color("background_color10");
+}
+
+// .aid-overview-page ul li .monitor-main{
+//   @include background_color("background_color10");
+// }
+#preTriage {
+  height: 100%;
+  @include background_color("background_color22")
+}
+
+#preTriage .preTriageTop,
+#preTriage .preTriageMid,
+#preTriage .preTriageLast .separateTreatment,
+#preTriage .preTriageLast .patientScore {
+  @include background_color("background_color24")
+}
+
+#preTriage .preTriageLast .separateTreatment .triageBox {
+  @include font_color("font_color2");
+
+  .span-box {
+    color: #000;
+  }
+}
+
+#preTriage .preTriageMid .vitalSigns .Vsone .vsMsg span .el-input .el-input__inner {
+  @include background_color("background_color5")
+}
+
+.medical-history-page {
+  @include font_color("font_color3");
+}
+
+.medical-history-page .page-left {
+  @include background_color("background_color5");
+  @include font_color("font_color2");
+}
+
+.el-tabs__item {
+  @include font_color("font_color2");
+}
+
+#preTriage .preTriageLast .patientScore .el-button {
+  min-width: 50px;
+}
+
+.photo-video-page {
+  // width: 100%;
+  height: calc(100vh - 176px);
+  margin: 30px;
+  background: #FFF;
+  @include background_color("background_color24");
+}
+
+.show-scroll::-webkit-scrollbar {
+  display: block;
+  width: 7px;
+  height: 7px;
+  background-color: #ffd3d3;
+  border-radius: 50px;
+}
+
+.show-scroll::-webkit-scrollbar-track {
+  background-color: #F1F1F1;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.22);
+  border-radius: 50px;
+}
+
+.show-scroll::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 50px;
+}
+
+.show-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: #a8a8a8;
+}
+
+.show-scroll::-webkit-scrollbar-thumb:active {
+  background-color: #787878;
+}
+
+
+.el-table__body-wrapper::-webkit-scrollbar {
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #ffd3d3;
+  border-radius: 50px;
+}
+
+.el-table__body-wrapper::-webkit-scrollbar-track {
+  background-color: #F1F1F1;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.22);
+  border-radius: 50px;
+}
+
+.el-table__body-wrapper::-webkit-scrollbar-thumb {
+
+  background-color: #c1c1c1;
+  border-radius: 50px;
+}
+
+.el-table__body-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #a8a8a8;
+}
+
+.el-table__body-wrapper::-webkit-scrollbar-thumb:active {
+  background-color: #787878;
+}
+
+/**侧边弹窗样式 */
+.el-drawer.rtl {
+  top: 83px;
+  height: calc(100vh - 125px);
+  border-radius: 5px;
+  font-size: 18px;
+  color: #000;
+}
+
+.el-drawer.rtl .el-drawer__header {
+  height: 50px;
+  line-height: 50px;
+  background: #e4e7ed;
+  border-radius: 5px 5px 0 0;
+  padding: 0 16px;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.el-drawer.rtl .el-drawer__header i {
+  font-size: 24px;
+  color: #000;
+  font-weight: 700;
+}
+
+.drawer-main {
+  padding: 0 23px 0 48px;
+  height: calc(100vh - 240px);
+  overflow-y: scroll;
+
+}
+
+.drawer-main .main-top {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.drawer-main .main-top .top-left {
+  margin-right: 24px;
+}
+
+.drawer-main p {
+  padding: 8px 0;
+}
+
+.drawer-main .btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+
+}
+
+.drawer-main .btn .el-button {
+  width: 100px;
+  font-size: 18px;
+}
+
+/*输入框图标样式*/
+.el-input__icon {
+  line-height: 35px;
+}
+
+//其他公共样式
+.required {
+  color: #F56C6C;
+}
+
+/* 主布局 */
+.content {
+  height: 100%;
+  width: 100%;
+}
+
+.el-dialog {
+  background: transparent;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.el-dialog .el-dialog__header {
+  background: #1bad96;
+}
+
+.el-dialog .el-dialog__body,
+.el-dialog .el-dialog__footer {
+  background: #fff;
+}
+
+.el-dialog .el-dialog__header span {
+  color: #fff;
+}
+
+.el-dialog .el-dialog__header .el-dialog__headerbtn .el-dialog__close {
+  color: #fff;
+}
+
+
+
+.el-input__inner {
+  height: 35px;
+  line-height: 35px;
+  color: #333333;
+}
+
+i {
+  font-style: normal;
+}
+
+.clearfix:after {
+  /*伪元素是行内元素 正常浏览器清除浮动方法*/
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/*移除抽屉样式*/
+:focus {
+  outline: -webkit-focus-ring-color auto 0px;
+}
+
+/*顶部工具栏样式*/
+.top-tool {
+  display: flex;
+}
+
+.top-tool .el-input {
+  width: 120px;
+}
+
+.tool-item {
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.grade {
+  .grade-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 94px;
+
+    .grade-title {
+      font-size: 18px;
+      margin-top: 15px;
+      margin-right: 10px;
+    }
+
+    .grade-con {
+      width: 148px;
+      height: 40px;
+      text-align: center;
+      border-bottom: 1px solid #d2d2d2;
+    }
+
+    .grade-con span {
+      font-size: 36px;
+      line-height: 30px;
+    }
+  }
+}
+
+.grade-color_001 {
+  color: #ff0000;
+}
+
+.grade-color_002 {
+  color: #ff7639;
+}
+
+.grade-color_003 {
+  color: #fec256;
+}
+
+.grade-color_004 {
+  color: #429f4f;
+}
+
+.grade-color_005 {
+  color: #53fac8;
+}
+
+.grade-sty {
+  width: 50px;
+  height: 30px;
+  line-height: 23px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.grade-sty_001 {
+  font-size: 100;
+
+  .el-input__inner {
+    color: #ff0000;
+  }
+}
+
+.grade-sty_002 {
+  .el-input__inner {
+    color: #ff7639;
+  }
+}
+
+.grade-sty_003 {
+  .el-input__inner {
+    color: #fec256;
+  }
+}
+
+.grade-sty_004 {
+  .el-input__inner {
+    color: #429f4f;
+  }
+}
+
+.grade-sty_005 {
+  .el-input__inner {
+    color: #53fac8;
+  }
+}
+
+.grade-styTriageLevel_000 {
+  width: 24px !important;
+  height: 24px !important;
+  color: #fff !important;
+  background-color: #ff0000 !important;
+  transform: scale(0.9);
+}
+
+.grade-styTriageLevel_001 {
+  color: #fff !important;
+  background-color: #ff0000 !important;
+}
+
+.grade-styTriageLevel_002 {
+  color: #fff !important;
+  background-color: #ff7639 !important;
+}
+
+.grade-styTriageLevel_003 {
+  color: #fff !important;
+  background-color: #fec256 !important;
+}
+
+.grade-styTriageLevel_004 {
+  color: #fff !important;
+  background-color: #429f4f !important;
+}
+
+.grade-styTriageLevel_005 {
+  color: #fff !important;
+  background-color: #53fac8 !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.el-table__fixed-right-patch {
+  width: 0 !important;
+}
+
+.el-form-item__label {
+  color: #000;
+}
+
+
+
+#record-report {
+  .triage-box {
+    .el-table__body-wrapper {
+      height: calc(100vh - 356px);
+    }
+  }
+}
+
+#aoe-record-find {
+  .el-table {
+    .el-table__body-wrapper {
+      height: calc(100vh - 290px);
+    }
+  }
+}
+
+#fast-channel-page {
+  .list-main {
+    .el-table {
+      .el-table__body-wrapper {
+        height: calc(100vh - 290px);
+      }
+    }
+  }
+
+  .drawer-main {
+    .el-table {
+      height: calc(100vh - 370px);
+    }
+  }
+}
+
+#triage-find {
+  .drawer-main {
+    .drawer-tabel {
+      .el-table__body-wrapper {
+        height: calc(100vh - 412px);
+      }
+    }
+  }
+
+  .el-table__body-wrapper {
+    height: calc(100vh - 300px);
+  }
+}
+
+#triage-config {
+  .el-table__body-wrapper {
+    height: calc(100vh - 281px);
+  }
+
+  .type-area {
+    .el-table__body-wrapper {
+      height: calc(100vh - 202px);
+    }
+  }
+}
+
+#triage-table {
+  .el-table {
+    .el-table__body-wrapper {
+      height: calc(100vh - 275px);
+    }
+  }
+
+}
+
+#gist-manage {
+  .el-table {
+    .el-table__body-wrapper {
+      height: calc(100vh - 324px);
+    }
+  }
+}
+
+#vital-signs-manage {
+  .el-table {
+    .el-table__body-wrapper {
+      height: calc(100vh - 275px);
+    }
+  }
+}
+
+#score-manage {
+  .el-table {
+    .el-table__body-wrapper {
+      height: calc(100vh - 276px);
+    }
+  }
+
+}
+
+#fast-channel-setting {
+  .el-table {
+    .el-table__body-wrapper {
+      height: calc(100vh - 278px);
+    }
+  }
+}
+
+#triage-report {
+  .report2 {
+    .form-box {
+      .el-table__body-wrapper {
+        height: calc(100vh - 701px);
+        overflow-x: hidden;
+      }
+
+      .query-box {
+        p {
+          width: calc(100vh / 3);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:1600px) {
+  body {
+    zoom: 0.8;
+
+    .child-page {
+      height: calc(108vh + 4px);
+
+      #triage-config {
+        .el-table__body-wrapper {
+          height: calc(108vh - 150px);
+        }
+
+        .type-area {
+          .el-table__body-wrapper {
+            height: calc(108vh - 74px);
+          }
+        }
+      }
+
+      #gist-manage {
+        .el-table {
+          .el-table__body-wrapper {
+            height: calc(108vh - 195px);
+          }
+        }
+      }
+
+      #vital-signs-manage {
+        .el-table {
+          .el-table__body-wrapper {
+            height: calc(108vh - 144px);
+          }
+        }
+      }
+
+      #score-manage {
+        .el-table {
+          .el-table__body-wrapper {
+            height: calc(108vh - 146px);
+          }
+        }
+
+      }
+
+      #triage-table {
+        .el-table {
+          .el-table__body-wrapper {
+            height: calc(108vh - 146px);
+          }
+        }
+
+      }
+
+      #fast-channel-setting {
+        .el-table {
+          .el-table__body-wrapper {
+            height: calc(108vh - 148px);
+          }
+        }
+      }
+
+      #record-report {
+        .triage-box {
+          .el-table {
+            .el-table__body-wrapper {
+              height: calc(108vh - 228px);
+            }
+          }
+        }
+      }
+
+      #triage-report {
+
+        // .report1 {
+        //   .list-box {
+        //     height: calc(108vh - 36px);
+        //   }
+        // }
+        .report2 {
+          .form-box {
+            .el-table__body-wrapper {
+              height: calc(108vh - 570px);
+              overflow-x: hidden;
+            }
+
+            .query-box {
+              p {
+                width: calc(108vh / 3);
+              }
+            }
+          }
+        }
+      }
+
+      #aoe-record-find {
+        .el-table {
+          height: calc(108vh - 115px);
+
+          .el-table__body-wrapper {
+            height: calc(108vh - 163px);
+          }
+        }
+      }
+
+      #fast-channel-page {
+        .el-table {
+          height: calc(108vh - 115px);
+
+          .el-table__body-wrapper {
+            height: calc(108vh - 163px);
+          }
+        }
+      }
+
+      #triage-find {
+        .drawer-main {
+          .drawer-tabel {
+            .el-table__body-wrapper {
+              height: calc(108vh - 256px);
+            }
+          }
+        }
+
+        .el-table__body-wrapper {
+          height: calc(108vh - 162px);
+        }
+      }
+
+    }
+  }
+
+  .el-table__body-wrapper {
+    height: calc(108vh - 193px);
+    overflow-y: auto;
+  }
+
+  .photo-video-page {
+    height: calc(108vh - 47px);
+  }
+
+  .el-drawer {
+    height: calc(108vh + 4px);
+  }
+
+  .el-drawer.rtl {
+    height: calc(108vh + 4px);
+  }
+
+  .drawer-main {
+    height: calc(108vh - 13px);
+  }
+
+}
+
+@media screen and (max-width:1366px) {
+  body {
+    zoom: 0.65;
+
+    .child-page {
+      height: calc(134vh - 1px);
+
+      #triage-config {
+        .el-table__body-wrapper {
+          height: calc(134vh - 155px);
+        }
+
+        .type-area {
+          .el-table__body-wrapper {
+            height: calc(134vh - 78px);
+            overflow-x: hidden;
+          }
+        }
+      }
+
+      #gist-manage {
+        .el-table {
+          .el-table__body-wrapper {
+            height: calc(134vh - 199px);
+          }
+        }
+      }
+
+      #vital-signs-manage {
+        .el-table {
+          .el-table__body-wrapper {
+            height: calc(134vh - 148px);
+          }
+        }
+      }
+
+      #score-manage {
+        .el-table {
+          .el-table__body-wrapper {
+            height: calc(134vh - 150px);
+          }
+        }
+
+      }
+
+      #triage-table {
+        .el-table {
+          .el-table__body-wrapper {
+            height: calc(134vh - 150px);
+            overflow-x: hidden;
+          }
+        }
+
+      }
+
+      #fast-channel-setting {
+        .el-table {
+          .el-table__body-wrapper {
+            height: calc(134vh - 152px);
+          }
+        }
+      }
+
+      #record-report {
+        .triage-box {
+          .el-table {
+            .el-table__body-wrapper {
+              height: calc(134vh - 230px);
+              overflow-x: hidden;
+            }
+          }
+        }
+      }
+
+      #triage-report {
+        .report2 {
+          .form-box {
+            .el-table__body-wrapper {
+              height: calc(134vh - 573px);
+              overflow-x: hidden;
+            }
+
+            .query-box {
+              p {
+                width: calc(132vh / 3);
+              }
+            }
+          }
+        }
+      }
+
+      #aoe-record-find {
+        .el-table {
+          height: calc(134vh - 118px);
+
+          .el-table__body-wrapper {
+            height: calc(134vh - 165px);
+            overflow-x: hidden;
+          }
+        }
+      }
+
+      #fast-channel-page {
+        .el-table {
+          height: calc(134vh - 118px);
+
+          .el-table__body-wrapper {
+            height: calc(134vh - 165px);
+            overflow-x: hidden;
+          }
+        }
+      }
+
+      #triage-find {
+        .drawer-main {
+          .drawer-tabel {
+            .el-table__body-wrapper {
+              height: calc(134vh - 256px);
+            }
+          }
+        }
+
+        .el-table__body-wrapper {
+          height: calc(134vh - 165px);
+        }
+      }
+
+    }
+  }
+
+  .el-table__body-wrapper {
+    height: calc(132vh - 196px);
+    overflow: auto;
+  }
+
+  .photo-video-page {
+    height: calc(132vh - 50px);
+  }
+
+  .el-drawer {
+    height: calc(134vh - 1px);
+  }
+
+  .el-drawer.rtl {
+    height: calc(134vh - 1px);
+  }
+
+  .drawer-main {
+    height: calc(134vh - 16px);
+  }
+
+}

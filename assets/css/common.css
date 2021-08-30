@@ -1,0 +1,39 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  user-select: none;
+  overflow: hidden;
+}
+
+ul,
+li {
+  list-style: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+div,
+p {
+  box-sizing: border-box;
+}
+a {
+  color: #595757;
+  text-decoration: none;
+}
+
+
+
+
